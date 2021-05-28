@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2675ca;
+}
+
+#logo {
+    width: 700px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* --- CARD --- */
+
+.card {
+    width: 140px;
+    height: 130px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card_back, .card_front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+    backface-visibility: hidden;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.card_front {
+    transform: rotateY(180deg);
+    background-color: rgb(17, 25, 48);
+}
+
+.card_back {
+    color: 101c2c;
+    background-color: white;
+    /* display: none; */
+}
+
+#gameOver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 50px;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#restart {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 7px;
+    background-color: yellow;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#gameBoard {
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    #logo {
+        width: 500px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .card {
+        width: 100px;
+        height: 100px;
+    }
+    #gameOver {
+        text-align: center;
+        font-size: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #restart{
+        font-size: 15px;
+    }
+}
