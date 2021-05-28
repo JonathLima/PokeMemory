@@ -101,12 +101,12 @@ body {
     }
     #gameOver {
         text-align: center;
-        font-size: 30px;
+        font-size: 12px;
         justify-content: center;
         align-items: center;
     }
 
     #restart{
-        font-size: 15px;
+        font-size: 10px;
     }
 }
