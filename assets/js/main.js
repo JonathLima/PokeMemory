@@ -84,9 +84,9 @@ function flipCard() {
                     secondCardView.classList.remove("flip");
                     game.unflipCards();
                 }, 1000);
-            };
+            }
 
-        };
+        }
     }
 
 }
